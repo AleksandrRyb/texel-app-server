@@ -1,3 +1,3 @@
 # texel-app-server
 
-API for textl app
+API for texel app
