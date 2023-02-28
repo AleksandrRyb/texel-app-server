@@ -1,0 +1,9 @@
+{
+  "name": "texel-app-server",
+  "version": "1.0.0",
+  "description": "texel app api",
+  "main": "index.js",
+  "repository": "https://github.com/AleksandrRyb/texel-app-server",
+  "author": "AleksandtRyb",
+  "license": "MIT"
+}
