@@ -4,6 +4,10 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
+import env from './config/env';
+
+const { port } = env;
+
 // Create Express server
 const app = express();
 
@@ -17,7 +21,6 @@ app.use(helmet());
 app.use(morgan('combined'));
 
 // Start server
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Server started on port ${process.env.PORT || 3000}`);
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
