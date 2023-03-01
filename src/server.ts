@@ -4,9 +4,6 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
-// import routes
-//import { sampleRoutes } from './routes/sampleRoutes';
-
 // Create Express server
 const app = express();
 
@@ -18,9 +15,6 @@ app.use(helmet());
 
 // Logging
 app.use(morgan('combined'));
-
-// API routes
-// app.use('/api/sample', sampleRoutes);
 
 // Start server
 app.listen(process.env.PORT || 3000, () => {
