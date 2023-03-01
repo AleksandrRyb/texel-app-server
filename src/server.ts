@@ -4,7 +4,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
-import env from './config/env';
+import env from '@config/env';
 
 const { port } = env;
 
