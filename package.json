@@ -6,6 +6,10 @@
   "repository": "https://github.com/AleksandrRyb/texel-app-server",
   "author": "AleksandtRyb",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
   "dependencies": {
     "@types/body-parser": "^1.19.2",
     "@types/cors": "^2.8.13",
