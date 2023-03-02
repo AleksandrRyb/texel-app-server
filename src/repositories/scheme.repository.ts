@@ -28,3 +28,5 @@ class SchemaRepository {
     return this.schemaTemplate;
   }
 }
+
+export { SchemaRepository };
