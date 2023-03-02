@@ -12,7 +12,11 @@
     "strictNullChecks": true,
     "baseUrl": "src",
     "paths": {
-      "@config/*": ["config/*"]
+      "@config/*": ["config/*"],
+      "@controllers/*": ["controllers/*"],
+      "@models/": ["models/*"],
+      "@repositories/*": ["repositories/*"],
+      "@routes/*": ["routes/*"]
     }
   },
   "include": ["src/**/*"],
