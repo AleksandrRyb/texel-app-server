@@ -5,8 +5,10 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 
 import env from '@config/env';
+import { SchemeRoutes } from '@routes/scheme.routes';
 
 const { port } = env;
+const schemeRoutes = new SchemeRoutes();
 
 class Server {
   private app: Application;
@@ -20,6 +22,9 @@ class Server {
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(cors());
     this.app.use(helmet());
+
+    //Routes
+    this.app.use('/', schemeRoutes.router);
 
     // Logging
     this.app.use(morgan('combined'));

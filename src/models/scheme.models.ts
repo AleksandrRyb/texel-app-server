@@ -13,7 +13,7 @@ export interface InputParametr {
   type: 'number' | 'select';
   name: 'input_num' | 'input_text';
   title: string;
-  item: InputItem[];
+  item?: InputItem[];
 }
 
 export interface OutputParametr {
