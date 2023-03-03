@@ -1,6 +1,6 @@
 import { Router, Response, Request } from 'express';
 
-import { SchemeController } from '@controllers/scheme.controller';
+import SchemeController from '@controllers/scheme.controller';
 
 class SchemeRoutes {
   public router: Router;
@@ -17,4 +17,4 @@ class SchemeRoutes {
   }
 }
 
-export { SchemeRoutes };
+export default SchemeRoutes;

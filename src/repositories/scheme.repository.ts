@@ -29,4 +29,4 @@ class SchemaRepository {
   }
 }
 
-export { SchemaRepository };
+export default SchemaRepository;

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { SchemaRepository } from '@repositories/scheme.repository';
+import SchemaRepository from '@repositories/scheme.repository';
 
 class SchemeController {
   public async getScheme(req: Request, res: Response) {
@@ -15,4 +15,4 @@ class SchemeController {
   }
 }
 
-export { SchemeController };
+export default SchemeController;

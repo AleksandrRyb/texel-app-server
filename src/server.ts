@@ -4,8 +4,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
+import SchemeRoutes from '@routes/scheme.routes';
 import env from '@config/env';
-import { SchemeRoutes } from '@routes/scheme.routes';
 
 const { port } = env;
 const schemeRoutes = new SchemeRoutes();
