@@ -5,7 +5,7 @@ dotenv.config();
 
 // Define the config object
 const env = {
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 4000,
 };
 
 export default env;
