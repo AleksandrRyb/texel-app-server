@@ -6,7 +6,18 @@ class SchemaRepository {
     title: 'Пример веб-сервиса',
     description: 'Описание веб-сервиса',
     parameters: {
-      input: {},
+      input: [
+        {
+          type: 'number',
+          name: 'input_num',
+          title: 'Числовое значение, передаваемое на вход программе',
+        },
+        {
+          type: 'number',
+          name: 'input_num_2',
+          title: 'Числовое значение, передаваемое на вход программе',
+        },
+      ],
       output: [
         {
           type: 'string',
