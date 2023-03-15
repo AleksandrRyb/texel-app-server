@@ -13,9 +13,14 @@ class SchemaRepository {
           title: 'Числовое значение, передаваемое на вход программе',
         },
         {
-          type: 'number',
-          name: 'input_num_2',
-          title: 'Числовое значение, передаваемое на вход программе',
+          type: 'select',
+          name: 'input_text',
+          title:
+            'Текстовое значение, выбираемое из списка и передаваемое на вход программе',
+          items: [
+            { value: 'text1', label: 'Первый элемент' },
+            { value: 'text2', label: 'Второй элемент' },
+          ],
         },
       ],
       output: [

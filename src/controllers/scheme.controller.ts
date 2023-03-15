@@ -13,6 +13,13 @@ class SchemeController {
       res.status(500).json(error);
     }
   }
+
+  public async postScheme(req: Request, res: Response) {
+    const { body } = req;
+    try {
+      console.log(body);
+    } catch (error) {}
+  }
 }
 
 export default SchemeController;

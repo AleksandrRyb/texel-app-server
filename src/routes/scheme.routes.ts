@@ -1,4 +1,4 @@
-import { Router, Response, Request } from 'express';
+import { Router } from 'express';
 
 import SchemeController from '@controllers/scheme.controller';
 
@@ -14,6 +14,7 @@ class SchemeRoutes {
 
   initRoutes() {
     this.router.get('/config', this.controller.getScheme);
+    this.router.post('/run', this.controller.postScheme);
   }
 }
 
