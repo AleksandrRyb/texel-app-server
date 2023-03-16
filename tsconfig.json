@@ -16,6 +16,7 @@
       "@controllers/*": ["controllers/*"],
       "@models/*": ["models/*"],
       "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
       "@repositories/*": ["repositories/*"],
       "@routes/*": ["routes/*"]
     }
