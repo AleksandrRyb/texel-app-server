@@ -24,7 +24,7 @@ export interface OutputParametr {
 
 interface InputItem {
   value: string;
-  title: string;
+  label: string;
 }
 
 interface Commands {
