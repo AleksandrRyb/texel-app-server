@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
 import SchemaRepository from '@repositories/scheme.repository';
-import { executeShellScript } from '@services/executeShellScript';
+import { executeShellScript } from '@services/execute-shell-script';
 
 class SchemeController {
   public async getScheme(req: Request, res: Response) {
