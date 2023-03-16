@@ -11,8 +11,12 @@ class SchemeController {
       const sr = new SchemaRepository();
       const schemeObj = sr.get();
 
+      logger.info('getScheme: request to scheme was successfull');
+
       res.status(200).json(schemeObj);
     } catch (error) {
+      logger.error(`getScheme: ${error}`);
+
       res.status(500).json(error);
     }
   }
@@ -29,13 +33,16 @@ class SchemeController {
         throw new Error(JSON.stringify(result.error));
       }
 
-      logger.info(result.message);
+      logger.info(`postScheme: ${result.message}`);
 
       res
         .status(200)
         .json({ message: removeNewlines(result.message as string) });
+
       res.end();
     } catch (error) {
+      logger.error(`postScheme: ${error}`);
+
       res.status(400).json(error);
     }
   }

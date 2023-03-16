@@ -4,8 +4,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Define the config object
-const env = {
+export const env = {
   port: process.env.PORT || 4000,
 };
-
-export default env;
