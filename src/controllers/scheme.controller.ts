@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 
 import SchemaRepository from '@repositories/scheme.repository';
 import { executeShellScript } from '@services/execute-shell-script';
+import { removeNewlines } from '@utils/remove-newlines';
 
 class SchemeController {
   public async getScheme(req: Request, res: Response) {
@@ -27,7 +28,7 @@ class SchemeController {
         throw new Error(result.error);
       }
 
-      res.status(200).json({ message: result.message });
+      res.status(200).json({ message: removeNewlines(result.message) });
       res.end();
     } catch (error) {
       res.status(400).json(error);
