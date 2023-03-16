@@ -1,10 +1,8 @@
 #!/bin/bash
 echo "Starting process..."
-
-daedfaefsaef
-
+fafasefsrgsrg
 sleep 5
 
-echo "Input arguments: $@"
+echo "Script successfully done with arguments:  $@"
 
 exit 0
