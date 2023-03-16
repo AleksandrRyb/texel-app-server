@@ -22,13 +22,14 @@ class SchemeController {
       const scriptArgs = Object.keys(body).map((key) => body[key]);
       const scriptPath = './scripts/start.sh';
 
-      await executeShellScript(scriptPath, scriptArgs)
-        .then((result) => res.status(200).json({ message: result }))
-        .catch(() => {
-          throw new Error('New error');
-        });
+      const result = await executeShellScript(scriptPath, scriptArgs);
 
-      res.status(200).json({ message: 'Script was successfully ended' });
+      if (result.error) {
+        throw new Error(result.error);
+      }
+
+      res.status(200).json({ message: result.message });
+      res.end();
     } catch (error) {
       res.status(400).json(error);
     }

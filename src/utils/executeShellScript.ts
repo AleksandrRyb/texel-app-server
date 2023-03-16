@@ -3,20 +3,20 @@ import { exec } from 'child_process';
 export async function executeShellScript(
   scriptPath: string,
   scriptArgs: string[]
-): Promise<string> {
+): Promise<{ [key: string]: string }> {
   const scriptCommand = `${scriptPath} ${scriptArgs.join(' ')}`;
 
-  return new Promise<string>((resolve, reject) => {
+  return await new Promise<{ [key: string]: string }>((resolve, reject) => {
     exec(scriptCommand, (error, stdout, stderr) => {
       if (error) {
-        reject(error);
+        reject({ error: error });
       }
 
       if (stderr) {
-        reject(stderr);
+        reject({ error: stderr });
       }
 
-      resolve(stdout);
+      resolve({ message: stdout });
     });
   });
 }
