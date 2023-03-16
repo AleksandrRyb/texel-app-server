@@ -3,6 +3,7 @@ import { Request, Response } from 'express';
 import SchemaRepository from '@repositories/scheme.repository';
 import { executeShellScript } from '@services/execute-shell-script';
 import { removeNewlines } from '@utils/remove-newlines';
+import { logger } from '@config/logger';
 
 class SchemeController {
   public async getScheme(req: Request, res: Response) {
@@ -27,6 +28,8 @@ class SchemeController {
       if (result.error) {
         throw new Error(JSON.stringify(result.error));
       }
+
+      logger.info(result.message);
 
       res
         .status(200)

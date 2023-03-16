@@ -2,7 +2,6 @@ import express, { Application } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
-import morgan from 'morgan';
 
 import SchemeRoutes from '@routes/scheme.routes';
 import env from '@config/env';
@@ -25,9 +24,6 @@ class Server {
 
     //Routes
     this.app.use('/', schemeRoutes.router);
-
-    // Logging
-    this.app.use(morgan('combined'));
   }
 
   public start(): void {
