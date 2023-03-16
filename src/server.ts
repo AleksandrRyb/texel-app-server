@@ -13,17 +13,12 @@ class Server {
   private app: Application;
 
   constructor() {
-    // Create Express server
     this.app = express();
 
-    // Express configuration
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(cors());
     this.app.use(helmet());
-
-    //Routes
-    this.app.use('/', schemeRoutes.router);
   }
 
   public start(): void {
