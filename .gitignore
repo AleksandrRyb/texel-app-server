@@ -4,6 +4,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+info.log
+error.log
+
 
 # Build
 dist/
@@ -15,3 +18,4 @@ dist/
 # Miscellaneous
 .DS_Store
 Thumbs.db
+
