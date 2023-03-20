@@ -11,7 +11,8 @@
     "dev": "nodemon -r tsconfig-paths/register src/index.ts",
     "build": "tsc -p .",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "docker:local": "docker run -p 4000:4000 texelappserver"
   },
   "dependencies": {
     "@types/body-parser": "^1.19.2",
