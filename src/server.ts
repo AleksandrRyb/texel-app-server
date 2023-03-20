@@ -26,11 +26,7 @@ class Server {
 
   public start(): void {
     this.app.listen(port, () => {
-      if (process.env.NODE_ENV === 'production') {
-        logger.info(`Server started on port ${port}`);
-      } else {
-        console.log(`Server started on port ${port}`);
-      }
+      logger.info(`Server started on port ${port}`);
     });
   }
 }
